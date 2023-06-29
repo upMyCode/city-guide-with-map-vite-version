@@ -3,11 +3,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import setCurrentUserInfoReducer from './reducers/setCurrentUserInfoReducer';
 import setDistanceRadiusReducer from './reducers/setDistanceRadiusReducer';
+import setFavouritesReducer from './reducers/setFavouritesReducer';
 import setModalStatusReducer from './reducers/setModalStatusReducer';
 import setSearchCategoriesReducer from './reducers/setSearchCategoriesReducer';
 import setSightsListReducer from './reducers/setSightsListReducer';
 import setUserPositionReducer from './reducers/setUserPositionReducer';
-import setFavouritesReducer from './reducers/setFavouritesReducer';
 
 const reducers = combineReducers({
   setUserPositionReducer,

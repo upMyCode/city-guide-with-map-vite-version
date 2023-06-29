@@ -1,6 +1,8 @@
+import React from 'react';
+
+import FavouritesPage from '@/pages/FavouritesPage';
 import HomePage from '@/pages/HomePage';
 import SearchPage from '@/pages/SearchPage';
-import FavouritesPage from '@/pages/FavouritesPage';
 
 import PATHS from './paths/paths';
 import type RoutesList from './types';

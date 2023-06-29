@@ -10,6 +10,7 @@ import {
   setDistanceRadiusAction,
   setModalStatusAction,
 } from '@/store/action';
+
 import { Button, Footer, Header, Info, Wrapper } from './styled';
 
 function UserLogOut() {

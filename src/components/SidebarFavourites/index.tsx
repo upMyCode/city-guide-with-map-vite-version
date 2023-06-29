@@ -1,14 +1,16 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 
 import type { TypeRootState } from '@/store';
+
 import type { Features } from '../LocationMarkers/types';
 import {
   Content,
+  SightItem,
   SightsContainer,
   SightsInfo,
   SightsList,
   Wrapper,
-  SightItem,
 } from './styled';
 
 function SidebarFavourites() {

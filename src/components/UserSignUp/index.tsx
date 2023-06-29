@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import AUTH_ERROR_CODES from '@/constants/firebaseErorsList';
 import { auth } from '@/firebaseApp';
 import { setModalStatusAction } from '@/store/action';
+
 import CustomInput from '../CustomInput';
 import {
   Footer,

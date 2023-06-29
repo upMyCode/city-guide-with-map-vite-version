@@ -1,4 +1,5 @@
 import type { Features } from '@/components/LocationMarkers/types';
+
 import type { SetSightsListAction } from './types';
 
 interface Sights {

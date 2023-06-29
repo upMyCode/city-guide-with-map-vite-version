@@ -1,7 +1,9 @@
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import type { TypeRootState } from '@/store';
 import { setModalStatusAction } from '@/store/action';
+
 import { ModalContent, ModalWrapper } from './styled';
 import type ModalProps from './types';
 

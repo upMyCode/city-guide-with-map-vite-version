@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
+import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import L from 'leaflet';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import type { TypeRootState } from '@/store';
 import { setFavouritesAction } from '@/store/action';
-import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 
-import { Wrapper, Text, Content, FavouritesButton } from './styled';
-
+import { Content, FavouritesButton, Text, Wrapper } from './styled';
 import type MarkerCardProps from './types';
 
 function MarkerCard({ elem, info, icon }: MarkerCardProps) {

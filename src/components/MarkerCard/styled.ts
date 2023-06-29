@@ -28,4 +28,4 @@ const FavouritesButton = styled.button`
   appearance: none;
 `;
 
-export { Wrapper, Text, Content, FavouritesButton };
+export { Content, FavouritesButton, Text, Wrapper };

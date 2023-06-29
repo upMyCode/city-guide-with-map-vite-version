@@ -1,10 +1,11 @@
 import { Icon } from 'leaflet';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 
-import ICON_LIST from '@/constants/iconList';
-import type CustomMarkerProps from './types';
 import MarkerCard from '@/components/MarkerCard';
+import ICON_LIST from '@/constants/iconList';
+
+import type CustomMarkerProps from './types';
 
 function CustomMarker({ icon, position, info, elem }: CustomMarkerProps) {
   const { beach, burial, culture, historic, religion, unknown, user } =

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useMapEvents, Circle } from 'react-leaflet';
+import React, { useEffect, useState } from 'react';
+import { Circle, useMapEvents } from 'react-leaflet';
 import { useDispatch, useSelector } from 'react-redux';
 
 import getSightsDataNearby from '@/api';
@@ -7,6 +7,7 @@ import { chooseUserSights, getAllSights, getCategory } from '@/helpers';
 import usePosition from '@/hooks/usePosition';
 import type { TypeRootState } from '@/store';
 import { setSightsListAction } from '@/store/action';
+
 import CustomMarker from '../CustomMarker';
 import type { Features } from './types';
 
@@ -19,7 +20,7 @@ function LocationMarkers() {
   const radius = useSelector(
     (state: TypeRootState) => state.setDistanceRadiusReducer.radius,
   );
-  const [markers, setMarkers] = useState<Array<any>>([]);
+  const [markers, setMarkers] = useState<Array<Features>>([]);
 
   const initialMarker = {
     type: 'features',

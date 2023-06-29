@@ -3,11 +3,11 @@ import type { LatLngTuple } from 'leaflet';
 import type {
   setCurrentUserInfoAction,
   setDistanceRadiusAction,
+  setFavouritesAction,
   setModalStatusAction,
   setSearchCategoriesAction,
   setSightsListAction,
   setUserPositionAction,
-  setFavouritesAction,
 } from '../action';
 
 type SetCurrentUserInfoAction = ReturnType<typeof setCurrentUserInfoAction>;
@@ -37,11 +37,11 @@ export type {
   Coords,
   SetCurrentUserInfoAction,
   SetDistanceRadiusAction,
+  SetFavouritesAction,
   SetModalStatusAction,
   SetSearchCategoriesAction,
   SetSightsListAction,
   SetUserPositionAction,
-  SetFavouritesAction,
   Status,
   User,
 };

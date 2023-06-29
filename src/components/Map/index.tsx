@@ -1,8 +1,10 @@
 import 'leaflet/dist/leaflet.css';
 
+import React from 'react';
 import { TileLayer } from 'react-leaflet';
 
 import usePosition from '@/hooks/usePosition';
+
 import ChangeView from '../ChangeView';
 import LocationMarkers from '../LocationMarkers';
 import MyMap from './styled';

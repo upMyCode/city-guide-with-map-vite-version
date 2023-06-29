@@ -1,3 +1,4 @@
+import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useSelector } from 'react-redux';
 
@@ -6,6 +7,7 @@ import Map from '@/components/Map';
 import Navbar from '@/components/Navbar';
 import ViewForm from '@/components/ViewForm';
 import type { TypeRootState } from '@/store';
+
 import PageWrapper from '../styled';
 import type PageProps from './types';
 

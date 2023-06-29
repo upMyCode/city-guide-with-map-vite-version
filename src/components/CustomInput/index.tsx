@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { CustomInputError, CustomInputWrapper, Input } from './styled';
 import type CustomInputProps from './types';
 

@@ -1,4 +1,7 @@
+import React from 'react';
+
 import Icon from '@/assets/img/vector.png';
+
 import { Input, SearchIcon, Wrapper } from './styled';
 
 interface TypeSearchBar {

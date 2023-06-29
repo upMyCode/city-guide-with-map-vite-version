@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Modal from '../Modal';
 import UserLogin from '../UserLogIn ';
 import UserLogOut from '../UserLogOut';

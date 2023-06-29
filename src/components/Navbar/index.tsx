@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ import SearchIcon from '@/assets/img/searchIcon.png';
 import userProfileIcon from '@/assets/img/userProfile.png';
 import PATHS from '@/constants/paths/paths';
 import { setModalStatusAction } from '@/store/action';
+
 import {
   NavbarContainer,
   NavbarItem,
