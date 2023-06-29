@@ -22,7 +22,7 @@ function Navbar() {
   const [isLogInStatus, setLogInStatus] = useState<boolean>(false);
   const isUserAuth = Cookies.get('user');
   const navigate = useNavigate();
-  const { HOME, SEARCH } = PATHS;
+  const { HOME, SEARCH, FAVOURITES } = PATHS;
 
   const handleRoute = (page: string) => {
     navigate(page);
@@ -56,6 +56,7 @@ function Navbar() {
               <NavbarItemImg src={SearchIcon} alt="logo" />
             </NavbarItem>
             <NavbarItem
+              onClick={() => handleRoute(FAVOURITES)}
               top="15px"
               width="60px"
               height="60px"

@@ -4,8 +4,9 @@ import { Marker, Popup } from 'react-leaflet';
 
 import ICON_LIST from '@/constants/iconList';
 import type CustomMarkerProps from './types';
+import MarkerCard from '@/components/MarkerCard';
 
-function CustomMarker({ icon, position, info }: CustomMarkerProps) {
+function CustomMarker({ icon, position, info, elem }: CustomMarkerProps) {
   const { beach, burial, culture, historic, religion, unknown, user } =
     ICON_LIST;
   const [renderIcon, setRenderIcon] = useState<string>(user);
@@ -53,7 +54,9 @@ function CustomMarker({ icon, position, info }: CustomMarkerProps) {
       }
       position={position}
     >
-      <Popup>{info}</Popup>
+      <Popup>
+        <MarkerCard info={info} elem={elem} icon={icon} />
+      </Popup>
     </Marker>
   );
 }

@@ -65,7 +65,7 @@ function LocationMarkers() {
   });
 
   return (
-    <>
+    <div>
       {markers.map((elem: Features) => {
         const { coordinates } = elem.geometry;
 
@@ -92,13 +92,14 @@ function LocationMarkers() {
                 icon={categoryMarker}
                 position={[coordinates[1], coordinates[0]]}
                 info={elem.properties.name}
+                elem={elem}
               />
             </div>
           );
         }
         return null;
       })}
-    </>
+    </div>
   );
 }
 

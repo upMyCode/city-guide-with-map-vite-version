@@ -26,6 +26,11 @@ const setUserPositionAction = (location: LocationData) => ({
   type: 'SET_USER_POSITION',
 });
 
+const setFavouritesAction = (favourites: Array<Features>) => ({
+  payload: favourites,
+  type: 'SET_FAVOURITES',
+});
+
 const setSightsListAction = (sights: Array<Features>) => ({
   payload: sights,
   type: 'SET_SIGHTS',
@@ -38,4 +43,5 @@ export {
   setSearchCategoriesAction,
   setSightsListAction,
   setUserPositionAction,
+  setFavouritesAction,
 };
