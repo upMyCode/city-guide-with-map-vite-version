@@ -13,7 +13,8 @@ dist-ssr
 *.local
 .prettierrc
 .eslintrc.cjs
-firebase/
+.firebase/
+.env
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
