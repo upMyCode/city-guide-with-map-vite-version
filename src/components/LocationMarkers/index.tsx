@@ -51,6 +51,7 @@ function LocationMarkers() {
           dispatch(setSightsListAction([]));
         }
       };
+
       void handleGetSight();
     } catch (e: unknown) {
       if (e instanceof Error) {
@@ -72,7 +73,7 @@ function LocationMarkers() {
           const categoryMarker = getCategory(elem);
 
           return (
-            <>
+            <div key={elem.id}>
               {radius > 10 && categoryMarker === 'user' && (
                 <Circle
                   center={[coordinates[1], coordinates[0]]}
@@ -92,7 +93,7 @@ function LocationMarkers() {
                 position={[coordinates[1], coordinates[0]]}
                 info={elem.properties.name}
               />
-            </>
+            </div>
           );
         }
         return null;

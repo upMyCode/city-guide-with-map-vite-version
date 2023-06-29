@@ -12,6 +12,7 @@ import type { TypeRootState } from '@/store';
 import {
   setDistanceRadiusAction,
   setSearchCategoriesAction,
+  setModalStatusAction,
 } from '@/store/action';
 import type { Features } from '../LocationMarkers/types';
 import SearchBar from '../SearchBar';
