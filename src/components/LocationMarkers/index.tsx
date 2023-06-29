@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useMapEvents } from 'react-leaflet';
+import { useMapEvents, Circle } from 'react-leaflet';
 import { useDispatch, useSelector } from 'react-redux';
 
 import getSightsDataNearby from '@/api';
@@ -72,12 +72,27 @@ function LocationMarkers() {
           const categoryMarker = getCategory(elem);
 
           return (
-            <CustomMarker
-              key={elem.id}
-              icon={categoryMarker}
-              position={[coordinates[1], coordinates[0]]}
-              info={elem.properties.name}
-            />
+            <>
+              {radius > 10 && categoryMarker === 'user' && (
+                <Circle
+                  center={[coordinates[1], coordinates[0]]}
+                  radius={radius}
+                  pathOptions={{ color: 'rgba(94, 123, 199, 0.4' }}
+                >
+                  <Circle
+                    center={[coordinates[1], coordinates[0]]}
+                    radius={radius / 10}
+                    pathOptions={{ color: 'rgba(94, 123, 199, 0.8)' }}
+                  />
+                </Circle>
+              )}
+              <CustomMarker
+                key={elem.id}
+                icon={categoryMarker}
+                position={[coordinates[1], coordinates[0]]}
+                info={elem.properties.name}
+              />
+            </>
           );
         }
         return null;
