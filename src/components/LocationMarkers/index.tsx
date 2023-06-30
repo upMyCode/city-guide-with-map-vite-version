@@ -9,25 +9,25 @@ import type { TypeRootState } from '@/store';
 import { setSightsListAction } from '@/store/action';
 
 import CustomMarker from '../CustomMarker';
-import type { Features } from './types';
+import type { Features, InitialMarker } from './types';
 
 function LocationMarkers() {
-  const dispatch = useDispatch();
   const { coords } = usePosition();
-  const category = useSelector(
-    (state: TypeRootState) => state.setSearchCategoriesReducer.category,
-  );
-  const radius = useSelector(
-    (state: TypeRootState) => state.setDistanceRadiusReducer.radius,
-  );
-  const [markers, setMarkers] = useState<Array<Features>>([]);
-
   const initialMarker = {
     type: 'features',
     id: '33565635',
     properties: { name: 'I m here', kinds: 'user' },
     geometry: { type: 'geometry', coordinates: [coords[1], coords[0]] },
   };
+
+  const dispatch = useDispatch();
+  const category = useSelector(
+    (state: TypeRootState) => state.setSearchCategoriesReducer.category,
+  );
+  const radius = useSelector(
+    (state: TypeRootState) => state.setDistanceRadiusReducer.radius,
+  );
+  const [markers, setMarkers] = useState<Array<Features | InitialMarker>>([]);
 
   useEffect(() => {
     try {
@@ -67,7 +67,7 @@ function LocationMarkers() {
 
   return (
     <div>
-      {markers.map((elem: Features) => {
+      {markers.map((elem: Features | InitialMarker) => {
         const { coordinates } = elem.geometry;
 
         if (coordinates) {

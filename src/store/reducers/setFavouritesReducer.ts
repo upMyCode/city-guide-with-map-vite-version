@@ -3,7 +3,7 @@ import type { Features } from '@/components/LocationMarkers/types';
 import type { SetFavouritesAction } from './types';
 
 interface Favourites {
-  favourites: Array<Features>;
+  favourites: Array<Features | any>;
 }
 const initialState: Favourites = {
   favourites: [],

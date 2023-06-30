@@ -1,7 +1,10 @@
-import type { Features } from '@/components/LocationMarkers/types';
+import type {
+  Features,
+  InitialMarker,
+} from '@/components/LocationMarkers/types';
 
 interface MarkerCardProps {
-  elem: Features;
+  elem: Features | InitialMarker;
   info: string;
   icon: string | undefined;
 }

@@ -1,4 +1,8 @@
-import type { Features, Locations } from '@/components/LocationMarkers/types';
+import type {
+  Features,
+  InitialMarker,
+  Locations,
+} from '@/components/LocationMarkers/types';
 
 const getAllSights = (result: Locations) => {
   const list = result.features;
@@ -23,7 +27,7 @@ const chooseUserSights = (sights: Array<Features>, category: string) => {
   return sightsList;
 };
 
-const getCategory = (sight: Features) => {
+const getCategory = (sight: Features | InitialMarker) => {
   const categories = [
     'historic',
     'beaches',

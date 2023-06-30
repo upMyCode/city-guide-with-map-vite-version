@@ -1,4 +1,7 @@
-import type { Features } from '@/components/LocationMarkers/types';
+import type {
+  Features,
+  InitialMarker,
+} from '@/components/LocationMarkers/types';
 
 import type { LocationData, Status, User } from './types';
 
@@ -27,7 +30,7 @@ const setUserPositionAction = (location: LocationData) => ({
   type: 'SET_USER_POSITION',
 });
 
-const setFavouritesAction = (favourites: Array<Features>) => ({
+const setFavouritesAction = (favourites: Array<Features | InitialMarker>) => ({
   payload: favourites,
   type: 'SET_FAVOURITES',
 });

@@ -1,6 +1,5 @@
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
-import L from 'leaflet';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -22,7 +21,6 @@ function MarkerCard({ elem, info, icon }: MarkerCardProps) {
   };
 
   const handlePropagation = (e: React.MouseEvent<HTMLDivElement>) => {
-    L.DomEvent.stopPropagation(e);
     e.stopPropagation();
     e.preventDefault();
   };

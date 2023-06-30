@@ -27,4 +27,17 @@ interface LocationsAPI {
   data: Locations;
 }
 
-export type { Features, Geometry, Locations, LocationsAPI };
+interface InitialMarker {
+  type: string;
+  id: string;
+  properties: {
+    name: string;
+    kinds: string;
+  };
+  geometry: {
+    type: string;
+    coordinates: Array<number>;
+  };
+}
+
+export type { Features, Geometry, InitialMarker, Locations, LocationsAPI };
